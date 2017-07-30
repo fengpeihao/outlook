@@ -1,7 +1,9 @@
-package com.fengpeihao.outlook;
+package com.fengpeihao.outlook.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.fengpeihao.outlook.R;
 
 public class MainActivity extends AppCompatActivity {
 

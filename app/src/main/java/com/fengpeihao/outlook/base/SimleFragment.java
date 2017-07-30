@@ -27,8 +27,12 @@ public abstract class SimleFragment extends Fragment {
         if (mRootView == null)
             mRootView = inflater.inflate(getLayoutId(), null);
         mBind = ButterKnife.bind(getActivity());
+
+        init();
         return mRootView;
     }
+
+    protected abstract void init();
 
     protected abstract int getLayoutId();
 

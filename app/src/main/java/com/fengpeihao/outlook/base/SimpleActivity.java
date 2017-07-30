@@ -22,7 +22,10 @@ public abstract class SimpleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         mBind = ButterKnife.bind(this);
+        init();
     }
+
+    protected abstract void init();
 
     protected abstract int getLayoutId();
 
