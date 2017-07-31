@@ -23,12 +23,12 @@ public class ApiModule {
 
     public ApiModule() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);//
         OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(interceptor)
                 .retryOnConnectionFailure(true)
                 .connectTimeout(15, TimeUnit.SECONDS)
-                .addNetworkInterceptor(new HttpLoggingInterceptor())
+//                .addNetworkInterceptor(new RequestParamInterceptor())//请求参数拦截
                 .build();
 
         mRetrofit = new Retrofit.Builder()

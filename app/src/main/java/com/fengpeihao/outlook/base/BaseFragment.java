@@ -1,7 +1,7 @@
 package com.fengpeihao.outlook.base;
 
 import com.fengpeihao.outlook.component.DaggerFragmentComponent;
-import com.fengpeihao.outlook.moudle.ActivityModule;
+import com.fengpeihao.outlook.moudle.AppModule;
 import com.fengpeihao.outlook.moudle.FragmentModule;
 
 /**
@@ -15,7 +15,7 @@ public abstract class BaseFragment<P extends BasePresenter> extends SimleFragmen
     @Override
     protected void init() {
         DaggerFragmentComponent.builder()
-                .activityModule(new ActivityModule(getActivity()))
+                .appModule(new AppModule(getActivity().getApplication()))
                 .fragmentModule(new FragmentModule(this))
                 .build();
 
